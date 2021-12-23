@@ -1,0 +1,90 @@
+<!-- <script>
+    // alert("hello dom")
+    var name = "Hnin"
+    console.log(name)
+</script> -->
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>Heading</h1>
+        <p>
+            Some Paragraph Content
+            <a href="#">A Link</a>
+        </p>
+    </body>
+</html> -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+        <style>
+            #box {
+                position: relative;
+                width: 800px;
+                height: 30px;
+                padding: 10px;
+                background: skyblue;
+                border: 5px solid darkblue;
+            }
+
+            #ball {
+                position: absolute;
+                left: 0;
+                top: 10;
+                width: 30px;
+                height: 30px;
+                border-radius: 30px;
+                background-color: palevioletred;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <div id="ball"></div>
+        </div>
+        <!-- <script>
+            let ball = document.querySelector("#ball")
+
+            let left = 0
+            setInterval(() => {
+                left += 1
+                if(left > 790) left = 0
+                ball.style.left = `${left}px`
+            }, 10); //10msec yout time change nay po
+            
+        </script> -->
+
+        <script>
+            let ball = document.querySelector("#ball")
+
+            let left = 0
+            let direction = "right"
+
+            let interval = setInterval(move, 10)
+
+            function move() {
+                if(direction === "right") {
+                    left += 1
+                    if(left > 790) direction = "left"
+                } else {
+                    left -= 1
+                    if(left < 1) direction = "right"
+                }
+
+                ball.style.left = `${left}px`
+            }
+            function start() {
+                interval = setInterval(move, 10);
+            }
+
+            function stop() {
+                clearInterval(interval)
+            }
+        </script>
+        <button onclick="start()">Start</button>
+        <button onclick="stop()">Stop</button>
+    </body>
+</html>

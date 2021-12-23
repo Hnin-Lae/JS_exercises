@@ -1,0 +1,28 @@
+{
+    "charas":[
+      {
+        "id": 1,
+        "chara":"Jin Yu Zhen",
+        "cv":"Aaron Lai"
+      },
+      { "id": 2,
+        "chara":"Shi Lei",
+        "cv":"Hank Wang"
+      },
+      {
+        "id": 3,
+        "chara":"Ci Xqi",
+        "cv":"Ji een" 
+      },
+      {
+        "id": 4,
+        "chara":"Yan Zhao",
+        "cv":"wei Po" 
+      },
+      {
+        "id": 5,
+        "chara":"Stone",
+        "cv":"Deyn" 
+      }
+    ]
+}

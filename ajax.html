@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>AjaxEG</title>
+    </head>
+    <body>
+        <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+        <div class="nameData">
+            <p>約・定～IDo最高❣</p>
+        </div>
+        
+        <script>
+        $.ajax({
+                url: './data.json',
+                dataType: 'json',
+                data: {name: 'chara'},
+                success: function(data) {
+                    console.log("data ok")
+                    var dataArray = data.charas;
+
+                    $.each(dataArray,function(i){
+                        $(".nameData").append("<p>id:" + dataArray[i].id 
+                            + " Character: " + dataArray[i].chara +
+                             "   (CV: " + dataArray[i].cv + ")</p>");
+                    });
+                }
+            });
+        
+           
+        </script>
+    </body>
+</html>

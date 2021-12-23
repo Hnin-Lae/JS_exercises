@@ -1,0 +1,25 @@
+<script>
+let people =[
+    {name: "Wan Wan"},
+    {name:"Aaron", gender: "M"},
+    {name: "Hank", gender: "m"},
+    {name: "Yaomi", gender: "F"},
+]
+
+
+let result = people.map(function(person) {
+    if(person.gender) {
+        if(person.gender === "m" || person.gender === "M") {
+            person.gender = "Male"
+        }
+        if(person.gender === "f" || person.gender === "F") {
+            person.gender = "Female"
+        }
+    } else {
+        person.gender = "Unknown"
+    }
+    return person
+}
+)
+</script>
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>list</title>
+    </head>
+    <body>
+        <ul>
+            <!-- <li>Item One</li>
+            <li>Item Two</li>
+            <li>Item Three</li>
+            <li>Item Four</li> -->
+        </ul>
+        <script>
+            // let items = document.querySelectorAll("ul > li")
+
+            // // for(li of items) {
+            // //     console.log(li.textContent)
+            // //}
+            // items.forEach(li => li.textContent)
+            let fruits = ["Apple", "Orange", "Mango"]
+            let ul = document.querySelector("ul")
+
+            fruits.map(fruit => {
+                let li = document.createElement("li")
+                li.textContent = fruit
+                ul.appendChild(li)
+            })
+        </script>
+    </body>
+</html>

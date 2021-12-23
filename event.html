@@ -1,0 +1,27 @@
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p id="note">
+            HELLO WORLD
+        </p>
+        <button onclick="hello()" ><Button></Button></button>
+    </body>
+</html> -->
+<!-- <script>
+    function hello() {
+        document.querySelector("#note").textContent = "Hello Event"
+    }
+</script> -->
+<!-- <script>
+    document.querySelector("button").addEventListener("click", e => {
+        document.querySelector("#note").textContent = "Hello Event"
+    })
+</script> -->
+<script>
+    document.querySelector("button").onclick = function(e) {
+        document.querySelector("#note").textContent = "Hello Event"
+    }
+</script>

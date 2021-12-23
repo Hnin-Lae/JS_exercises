@@ -1,0 +1,24 @@
+<script>
+    let people =[
+    {name: "Wan Wan"},
+    {name:"Aaron", gender: "M"},
+    {name: "Hank", gender: "m"},
+    {name: "Yaomi", gender: "F"},
+]
+
+    let result = people.map(function(person){
+        switch(person.gender){
+            case"m":
+            case"M":
+            person.gender = "Male"
+            break
+            case"f":
+            case"F":
+            person.gender = "Female"
+            break
+            default:
+            person.gender = "Unknown"
+        }
+        return person
+    })
+</script>
